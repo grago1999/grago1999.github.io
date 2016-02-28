@@ -46,6 +46,7 @@ p {
 	padding-right: 25%;
     line-height: 200%;
     margin-bottom: 40px;
+    display: block;
 }
 
 *, *:after, *:before {
@@ -112,8 +113,8 @@ h3 > a:before, p > a:before {
     transform: scaleX(0);
     transition: .15s linear;
 }
-h3 > a:hover:before, p > a:hover:before
-h3 > a:focus:before, p > a:focus:before {
+h3 > a:hover:before, p > a:hover:before,
+h3 > a:focus:before, p > a:hover:before {
     visibility: visible;
     transform: scaleX(1);
 }
@@ -132,6 +133,7 @@ h3 > a:visited, p > a:visited {
     }
     h1 {
         font-size: 80px;
+        font-weight: bold;
     }
     h2 {
         font-size: 60px;
