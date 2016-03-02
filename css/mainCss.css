@@ -19,13 +19,19 @@ h1 {
     font-weight: normal;
 }
 
-h2 {
+h2, h4 {
     font-family: 'Roboto', Fallback, sans-serif;
 	display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-top: 0px;
+}
+
+h4 {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 h3 {
@@ -47,6 +53,15 @@ p {
     line-height: 200%;
     margin-bottom: 40px;
     display: block;
+}
+
+.r {
+    margin-bottom: 0px;
+    font-size: 16px;
+    line-height: 150%;
+}
+.rt {
+    margin-top: 50px;
 }
 
 *, *:after, *:before {
@@ -131,6 +146,9 @@ h3 > a:visited, p > a:visited {
         margin-top: 0px;
         font-size: 40px;
     }
+    .r {
+        font-size: 30px;
+    }
     h1 {
         font-size: 80px;
         font-weight: bold;
@@ -141,6 +159,9 @@ h3 > a:visited, p > a:visited {
     h3 {
         margin-top: 70px;
         font-size: 50px;
+    }
+    h4 {
+        font-size: 20px;
     }
     li {
         margin-bottom: 30px;
