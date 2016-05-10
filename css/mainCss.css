@@ -29,7 +29,7 @@ h2, h4 {
 }
 
 h4 {
-    font-size: 16px;
+    font-size: 28px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -161,7 +161,7 @@ h3 > a:visited, p > a:visited {
         font-size: 50px;
     }
     h4 {
-        font-size: 20px;
+        font-size: 40px;
     }
     li {
         margin-bottom: 30px;
