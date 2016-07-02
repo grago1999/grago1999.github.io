@@ -110,12 +110,12 @@ li {
 	float: left;
 }
 
-h3 > a, p > a {
+h2 > a, h3 > a, p > a {
     text-decoration: none;
     color: black;
 }
 
-h3 > a:before, p > a:before {
+h2 > a:before, h3 > a:before, p > a:before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -128,13 +128,13 @@ h3 > a:before, p > a:before {
     transform: scaleX(0);
     transition: .15s linear;
 }
-h3 > a:hover:before, p > a:hover:before,
-h3 > a:focus:before, p > a:hover:before {
+h2 > a:hover:before, h3 > a:hover:before, p > a:hover:before,
+h2 > a:hover:before, h3 > a:focus:before, p > a:hover:before {
     visibility: visible;
     transform: scaleX(1);
 }
 
-h3 > a:visited, p > a:visited {
+h2 > a:visited, h3 > a:visited, p > a:visited {
 	color: black;
 	text-decoration: none;
 }
