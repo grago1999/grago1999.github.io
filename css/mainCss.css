@@ -141,43 +141,87 @@ a:visited {
 	z-index: -1;
 }
 
-@media screen and (orientation:portrait) {
-    p {
+@media (max-width: 700px) {
+
+	p {
+		font-size: 20px;
+	}
+
+	h1 {
+		font-size: 40px;
+	}
+
+	h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        margin-top: 20px;
+        font-size: 25px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+	.r {
+        font-size: 30px;
+    }
+
+	li {
+		padding-left: 8px;
+		padding-right: 8px;
+    }
+
+}
+
+@media screen and (orientation:portrait), screen and (max-width: 700px) {
+
+	p {
         padding-left: 10%;
         padding-right: 10%;
         margin-top: 0px;
         font-size: 40px;
     }
+
     .r {
         font-size: 30px;
     }
+
     h1 {
         font-size: 80px;
         font-weight: bold;
 		margin-bottom: 30px;
     }
+
     h2 {
         font-size: 60px;
     }
+
     h3 {
         margin-top: 70px;
         font-size: 50px;
     }
+
     h4 {
         font-size: 40px;
     }
+
     li {
 		padding-left: 15px;
 		padding-right: 15px;
         margin-bottom: 30px;
     }
+
 	.space {
 		height: 26%;
 	}
+
 	.bottom {
 		width: 100%;
 		height: 70px;
 		display: block;
 		z-index: -1;
 	}
+
 }
