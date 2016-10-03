@@ -162,6 +162,10 @@ a:visited {
     margin-bottom: 60px;
 }
 
+.hideInit {
+    display: none;
+}
+
 @media (max-width: 700px) {
 
 	p {
