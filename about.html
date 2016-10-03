@@ -21,9 +21,10 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 </head>
-<script>
-		window.onblur = function () { document.title = "Hey! Come back!"; }
-		window.onfocus = function () { document.title = "Who's Gianluca?"; }
+<script src="js/jQuery.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript">
+    setup(1);
 </script>
 <link rel="stylesheet" type="text/css" href="css/mainCss.css">
 <body>
@@ -39,14 +40,26 @@
         </div>
     </div>
     <div class="space"></div>
-    <h2><a href="http://www.regis.org/" target="_blank">Education</a></h2>
-    <p>I'm about to start my senior year at <a href="http://www.regis.org/" target="_blank">Regis High School.</a></p>
-    <h2><a href="http://ragoware.com" target="_blank">Company</a></h2>
-    <p>In early 2013 I started my own software company, <a href="http://ragoware.com" target="_blank">Ragoware.</a></p>
-    <h2><a href="https://following.tech" target="_blank">Blog</a></h2>
-    <p>I like to talk about my projects and tech news on my blog, <a href="https://following.tech" target="_blank">Following.Tech.</a></p>
-    <h2><a href="" target="_blank">Design Preferences</a></h2>
-    <p>I designed the majority of my apps and websites without the need for third party libraries, so nearly everything from the images and textures to the front-end and back-end code was made by me. I try to design beautiful and easy to use interfaces for the best possible experience.</p>
+    <div class="sr2Space"></div>
+    <h2 class="item"><a id="education" onclick="selectedItem(this.id)" target="_blank">Education</a></h2>
+    <div id="educationInfo" class="item">
+        <p>I'm about to start my senior year at <a href="http://www.regis.org/" target="_blank">Regis High School.</a></p>
+        <h2><a href="http://www.regis.org/" target="_blank" class="ext">View Website</a></h2>
+    </div>
+    <h2 class="item"><a id="company" onclick="selectedItem(this.id)" target="_blank">Company</a></h2>
+    <div id="companyInfo" class="item">
+        <p>In early 2013 I started my own software company, <a href="http://ragoware.com" target="_blank">Ragoware.</a></p>
+        <h2><a href="http://ragoware.com" target="_blank" class="ext">View Website</a></h2>
+    </div>
+    <h2 class="item"><a id="blog" onclick="selectedItem(this.id)" target="_blank">Blog</a></h2>
+    <div id="blogInfo" class="item">
+        <p>I like to talk about my projects and tech news on my blog, <a href="https://following.tech" target="_blank">Following.Tech.</a></p>
+        <h2><a href="http://ragoware.com" target="_blank" class="ext">View Website</a></h2>
+    </div>
+    <h2 class="item"><a id="design" onclick="selectedItem(this.id)" target="_blank">Design Preferences</a></h2>
+    <div id="designInfo" class="item">
+        <p>I designed the majority of my apps and websites without the need for third party libraries, so nearly everything from the images and textures to the front-end and back-end code was made by me. I try to design beautiful and easy to use interfaces for the best possible experience.</p>
+    </div>
     <div class="bottom"></div>
 </body>
 </html>

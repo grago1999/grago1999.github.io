@@ -145,8 +145,21 @@ a:visited {
     height: 80px;
 }
 
+.sr2Space {
+    height: 30px;
+}
+
 .inSpace {
     height: 0px;
+}
+
+.item {
+    margin-bottom: 30px;
+}
+
+.ext {
+    margin-top: -20px;
+    margin-bottom: 60px;
 }
 
 @media (max-width: 700px) {
