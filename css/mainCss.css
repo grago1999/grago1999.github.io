@@ -246,8 +246,16 @@ a:visited {
         height: 0px;
     }
 
+    .sr2Space {
+        height: 45px;
+    }
+
     .inSpace {
         height: 200px;
+    }
+
+    .item {
+        margin-bottom: 60px;
     }
 
 	.bottom {
@@ -256,5 +264,9 @@ a:visited {
 		display: block;
 		z-index: -1;
 	}
+
+    a:before {
+        height: 5px;
+    }
 
 }
