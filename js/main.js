@@ -9,11 +9,11 @@ console.log("You found me ( ͡° ͜ʖ ͡°). Look around for some other surprise
 
 function setup(pageId) {
 	if (pageId == 1) {
-		ids = ["#education", "#company", "#blog", "#languages", "#design"];
+		ids = ["#education", "#company", "#blog", "#languages"];
 	} else if (pageId == 2) {
-		ids = ["#conjungo", "#vrkit", "#discemus", "#lookingglass", "#followingtech", "#mdkit", "#helihavoc", "#graphingkit", "#gemini"];
+		ids = ["#lookingglass", "#followingtech", "#mdkit", "#helihavoc", "#graphingkit", "#gemini"];
 	} else {
-		ids = ["#email", "#github", "#linkedin", "#wwdcscholars"];
+		ids = ["#email", "#github", "#linkedin"];
 	}
 }
 
