@@ -1,38 +1,65 @@
 window.onblur = function () { document.title = "Hey! Come back!"; }
 window.onfocus = function () { document.title = "Who's Gianluca?"; }
 
-var ids = [];
-var currentId = "";
-var duration = 750;
 
-console.log("You found me ( ͡° ͜ʖ ͡°). Look around for some other surprises!")
+const appId = 10101010;
 
-function setup(pageId) {
-	if (pageId == 1) {
-		ids = ["#education", "#company", "#blog", "#languages"];
-	} else if (pageId == 2) {
-		ids = ["#lookingglass", "#followingtech", "#mdkit", "#helihavoc", "#graphingkit", "#gemini"];
-	} else {
-		ids = ["#email", "#github", "#linkedin"];
-	}
+let ids = [];
+const duration = 750;
+const currentPage = window.location.pathname.split("/").pop();
+
+if (currentPage == "about") {
+	ids = ["#education", "#company", "#blog", "#languages"];
+} else if (currentPage == "portfolio") {
+	ids = ["#lookingglass", "#followingtech", "#mdkit", "#helihavoc", "#graphingkit", "#gemini"];
+} else {
+	ids = ["#email", "#github", "#linkedin"];
 }
 
-function hideAll() {
+console.log("you found me ( ͡° ͜ʖ ͡°)");
+
+const hideAll = () => {
 	for (var i = 0; i < ids.length; i++) {
 		$(ids[i]+"Info").slideUp(duration);
 	}
 }
 
-function selectedItem(id) {
-	if (id == currentId) {
-		currentId = "";
+const selectedItem = id => {
+	if (id == currentPage) {
+		currentPage = "";
 		$("#"+id+"Info").slideUp(duration);
 	} else {
 		hideAll();
-		currentId = id;
+		currentPage = id;
 		$("#"+id+"Info").slideDown(duration);
 	}
-	$('html, body').animate({
+	$("html, body").animate({
         scrollTop: $("#"+id).offset().top-window.innerHeight/4
     }, duration);
-}
+    report("click-show-info", id);
+};
+
+const report = (actionTypeId, elementId = null) => {
+	// new Fingerprint2().get((result) => {
+	// 	var sha = new jsSHA("SHA-512", "TEXT");
+	// 	sha.update(result);
+	// 	deviceId = sha.getHash("HEX");
+	// 	var params = {
+	// 		appId: appId,
+	// 		deviceId: deviceId,
+	// 		actionTypeId: actionTypeId
+	// 	};
+	// 	if (elementId) {
+	// 		params.elementId = elementId;
+	// 	}
+	// 	$.ajax({
+	// 	    type: 'POST',
+	// 	    url: 'http://192.168.1.176:4004/analytics/api/report.php',
+	// 	    data: JSON.stringify(params),
+	// 	    contentType: "application/json",
+	// 	    dataType: 'json'
+	// 	});
+	// });
+};
+
+report("view-page", currentPage);
