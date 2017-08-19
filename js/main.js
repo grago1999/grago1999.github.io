@@ -2,9 +2,10 @@ const appId = 10101010;
 
 let ids = [];
 const duration = 750;
-const currentPage = window.location.pathname.split("/").pop().replace(".html", "");
+const fileName = window.location.pathname.split("/").pop();
+const currentPage = fileName === "index.html" ? "home" : fileName.replace(".html", "");
 
-window.onblur = function () { document.title = "Hey! Come back to Gianluca's "+currentPage+" page!"; }
+window.onblur = function () { document.title = "Hey! Come back!"; }
 window.onfocus = function () { document.title = "Who's Gianluca?"; }
 
 if (currentPage == "about") {
