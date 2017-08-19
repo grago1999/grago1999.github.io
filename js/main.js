@@ -8,9 +8,9 @@ let ids = [];
 const duration = 750;
 const currentPage = window.location.pathname.split("/").pop();
 
-if (currentPage == "about") {
+if (currentPage == "about.html") {
 	ids = ["#education", "#company", "#blog", "#languages"];
-} else if (currentPage == "portfolio") {
+} else if (currentPage == "portfolio.html") {
 	ids = ["#lookingglass", "#followingtech", "#mdkit", "#helihavoc", "#graphingkit", "#gemini"];
 } else {
 	ids = ["#email", "#github", "#linkedin"];
@@ -30,7 +30,6 @@ const selectedItem = id => {
 		$("#"+id+"Info").slideUp(duration);
 	} else {
 		hideAll();
-		currentPage = id;
 		$("#"+id+"Info").slideDown(duration);
 	}
 	$("html, body").animate({
