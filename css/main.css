@@ -24,6 +24,10 @@ h2, h4 {
     margin-top: 0px;
 }
 
+h2 {
+    font-size: 28px;
+}
+
 h4 {
     font-size: 28px;
     margin-top: 20px;
@@ -36,7 +40,7 @@ h3 {
 }
 
 p {
-	font-size: 20px;
+	font-size: 24px;
 	padding-left: 25%;
 	padding-right: 25%;
     line-height: 200%;

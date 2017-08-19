@@ -1,16 +1,15 @@
-window.onblur = function () { document.title = "Hey! Come back!"; }
-window.onfocus = function () { document.title = "Who's Gianluca?"; }
-
-
 const appId = 10101010;
 
 let ids = [];
 const duration = 750;
-const currentPage = window.location.pathname.split("/").pop();
+const currentPage = window.location.pathname.split("/").pop().replace(".html", "");
 
-if (currentPage == "about.html") {
+window.onblur = function () { document.title = "Hey! Come back to Gianluca's "+currentPage+" page!"; }
+window.onfocus = function () { document.title = "Who's Gianluca?"; }
+
+if (currentPage == "about") {
 	ids = ["#education", "#company", "#blog", "#languages"];
-} else if (currentPage == "portfolio.html") {
+} else if (currentPage == "portfolio") {
 	ids = ["#lookingglass", "#followingtech", "#mdkit", "#helihavoc", "#graphingkit", "#gemini"];
 } else {
 	ids = ["#email", "#github", "#linkedin"];
