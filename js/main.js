@@ -39,26 +39,30 @@ const selectedItem = id => {
 };
 
 const report = (actionTypeId, elementId = null) => {
-	// new Fingerprint2().get((result) => {
-	// 	var sha = new jsSHA("SHA-512", "TEXT");
-	// 	sha.update(result);
-	// 	deviceId = sha.getHash("HEX");
-	// 	var params = {
-	// 		appId: appId,
-	// 		deviceId: deviceId,
-	// 		actionTypeId: actionTypeId
-	// 	};
-	// 	if (elementId) {
-	// 		params.elementId = elementId;
-	// 	}
-	// 	$.ajax({
-	// 	    type: 'POST',
-	// 	    url: 'http://192.168.1.176:4004/analytics/api/report.php',
-	// 	    data: JSON.stringify(params),
-	// 	    contentType: "application/json",
-	// 	    dataType: 'json'
-	// 	});
-	// });
+	new Fingerprint2().get((result) => {
+		var sha = new jsSHA("SHA-512", "TEXT");
+		sha.update(result);
+		deviceId = sha.getHash("HEX");
+		var params = {
+			appId: appId,
+			deviceId: deviceId,
+			actionTypeId: actionTypeId
+		};
+		if (elementId) {
+			params.elementId = elementId;
+		}
+		console.log(params)
+		$.ajax({
+		    type: 'POST',
+		    url: 'https://conjungo-178803.appspot.com/analytics/api/v1/report.php',
+		    data: JSON.stringify(params),
+		    contentType: "application/json",
+		    dataType: 'json',
+		    success: (data) => {
+		    	console.log(data);
+		    }
+		});
+	});
 };
 
 report("view-page", currentPage);
