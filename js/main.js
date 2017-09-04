@@ -57,11 +57,10 @@ const report = (actionTypeId, elementId = null) => {
 		    url: 'https://conjungo-178803.appspot.com/analytics/api/v1/report.php',
 		    data: JSON.stringify(params),
 		    contentType: "application/json",
-		    dataType: 'json',
-		    success: (data) => {
-		    	console.log(data);
-		    }
-		});
+		    dataType: 'json'
+		}).done((data) => {
+	    	console.log(data);
+	    });
 	});
 };
 
