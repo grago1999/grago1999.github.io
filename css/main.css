@@ -182,10 +182,6 @@ a:visited {
 		font-size: 40px;
 	}
 
-    h2 {
-        font-size: 42px;
-    }
-
     h3 {
         margin-top: 20px;
         font-size: 25px;
@@ -225,10 +221,6 @@ a:visited {
 		margin-bottom: 30px;
     }
 
-    h2 {
-        font-size: 42px;
-    }
-
     h3 {
         margin-top: 70px;
         font-size: 50px;
@@ -242,6 +234,10 @@ a:visited {
 		padding-left: 15px;
 		padding-right: 15px;
         margin-bottom: 30px;
+    }
+    
+    .main {
+        font-size: 42px;
     }
 
 	.space {
