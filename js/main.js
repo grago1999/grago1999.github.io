@@ -49,9 +49,7 @@ const report = (actionTypeId, elementId = null) => {
 		}
 		console.log(reportUrl);
 		$.get(reportUrl, (data, status) => {
-			console.log(data);
-			console.log(status);
-	        console.log(JSON.stringify(data));
+	        console.log("yay");
 	    });
 	});
 };
