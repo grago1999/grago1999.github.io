@@ -54,7 +54,7 @@ const report = (actionTypeId, elementId = null) => {
 		console.log(params)
 		$.ajax({
 		    type: 'POST',
-		    url: 'https://conjungo-178803.appspot.com/analytics/api/v1/report.php',
+		    url: 'https://conjungo.io/analytics/api/v1/report.php',
 		    data: JSON.stringify(params),
 		    contentType: "application/json",
 		    dataType: 'json'
