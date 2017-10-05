@@ -47,8 +47,11 @@ const report = (actionTypeId, elementId = null) => {
 		if (elementId) {
 			reportUrl += ("&elementId=" + elementId);
 		}
-		$.get(reportUrl, (res, status) => {
-	        console.log(JSON.stringify(res))
+		console.log(reportUrl);
+		$.get(reportUrl, (data, status) => {
+			console.log(data);
+			console.log(status);
+	        console.log(JSON.stringify(data));
 	    });
 	});
 };
