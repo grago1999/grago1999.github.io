@@ -39,7 +39,6 @@ const selectedItem = id => {
 };
 
 const report = (actionTypeId, elementId = null) => {
-	print("reported")
 	new Fingerprint2().get((result) => {
 		var sha = new jsSHA("SHA-512", "TEXT");
 		sha.update(result);
