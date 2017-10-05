@@ -45,10 +45,10 @@ const report = (actionTypeId, elementId = null) => {
 		deviceId = sha.getHash("HEX");
 		var reportUrl = "https://conjungo.io/analytics/api/v1/report.php?appId="+appId.toString()+"&deviceId="+deviceId+"&actionTypeId="+actionTypeId;
 		if (elementId) {
-			reportUrl += ("&elementId=" + params.elementId);
+			reportUrl += ("&elementId=" + elementId);
 		}
-		$.get(reportUrl, function(data, status){
-	        console.log("Data: " + data + "\nStatus: " + status);
+		$.get(reportUrl, (res, status) => {
+	        console.log(JSON.stringify(res))
 	    });
 	});
 };
