@@ -43,23 +43,12 @@ const report = (actionTypeId, elementId = null) => {
 		var sha = new jsSHA("SHA-512", "TEXT");
 		sha.update(result);
 		deviceId = sha.getHash("HEX");
-		var params = {
-			appId: appId,
-			deviceId: deviceId,
-			actionTypeId: actionTypeId
-		};
+		var reportUrl = "https://conjungo.io/analytics/api/v1/report.php?appId="+appId.toString()+"&deviceId="+deviceId+"&actionTypeId="+actionTypeId;
 		if (elementId) {
-			params.elementId = elementId;
+			reportUrl += ("&elementId=" + params.elementId);
 		}
-		console.log(params)
-		$.ajax({
-		    type: 'POST',
-		    url: 'https://conjungo.io/analytics/api/v1/report.php',
-		    data: JSON.stringify(params),
-		    contentType: "application/json",
-		    dataType: 'json'
-		}).done((data) => {
-	    	console.log(data);
+		$.get(reportUrl, function(data, status){
+	        console.log("Data: " + data + "\nStatus: " + status);
 	    });
 	});
 };
