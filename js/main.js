@@ -2,7 +2,7 @@ const appId = 10101010;
 
 let ids = [];
 const duration = 750;
-const fileName = window.location.pathname.split("/").pop();
+const fileName = window.location.pathname.indexOf('/') > -1 ? window.location.pathname.split('/').pop() : "index";
 const currentPage = fileName === "index.html" ? "home" : fileName.replace(".html", "");
 
 window.onblur = function () { document.title = "Hey! Come back!"; }
@@ -47,7 +47,6 @@ const report = (actionTypeId, elementId = null) => {
 		if (elementId) {
 			reportUrl += ("&elementId=" + elementId);
 		}
-		console.log(reportUrl);
 		$.get(reportUrl, (data, status) => {
 	        console.log("yay");
 	    });
