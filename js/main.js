@@ -2,7 +2,7 @@ const appId = 10101010;
 
 let ids = [];
 const duration = 750;
-const fileName = window.location.pathname.indexOf('/') > 0 ? window.location.pathname.split('/').pop() : "index.html";
+const fileName = window.location.pathname.includes('/') ? window.location.pathname.split('/').pop() : "index.html";
 const currentPage = fileName === "index.html" ? "home" : fileName.replace(".html", "");
 
 window.onblur = function () { document.title = "Hey! Come back!"; }
@@ -11,7 +11,7 @@ window.onfocus = function () { document.title = "Who's Gianluca?"; }
 if (currentPage == "about") {
 	ids = ["#education", "#company", "#blog", "#languages"];
 } else if (currentPage == "portfolio") {
-	ids = ["#lookingglass", "#followingtech", "#mdkit", "#helihavoc", "#graphingkit", "#gemini"];
+	ids = ["#lookingglass", "#mdkit", "#graphingkit", "#gemini"];
 } else {
 	ids = ["#email", "#github", "#linkedin"];
 }
