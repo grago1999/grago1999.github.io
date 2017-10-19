@@ -11,7 +11,7 @@ window.onfocus = function () { document.title = "Who's Gianluca?"; }
 if (currentPage == "about") {
 	ids = ["#education", "#company", "#blog", "#languages"];
 } else if (currentPage == "portfolio") {
-	ids = ["#lookingglass", "#mdkit", "#graphingkit", "#gemini"];
+	ids = ["#lookingglass", "#mdkit", "#core", "#gemini"];
 } else {
 	ids = ["#email", "#github", "#linkedin"];
 }
