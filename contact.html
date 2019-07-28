@@ -1,6 +1,8 @@
 <html>
 	<head>
 		<title> Who's Gianluca?</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
         <link rel="shortcut icon" type="image/png" href="/favicon.png">
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -20,26 +22,40 @@
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
 	</head>
-	<script>
-		window.onblur = function () { document.title = "Hey! Come back!"; }
-		window.onfocus = function () { document.title = "Who's Gianluca?"; }
-	</script>
-	<link rel="stylesheet" type="text/css" href="css/mainCss.css">
+	<script type="text/javascript" src="js/jQuery.js"></script>
+    <script type="text/javascript" src="js/sha512.js"></script>
+    <script type="text/javascript" src="js/fingerprint2.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<body>
-		<div class="topBar">
-			<h1>Gianluca Rago</h1>
-			<div class="navBar">
-				<ul>
-					<li><h3><a href="index.html">Home</a></h3></li>
-					<li><h3><a href="resume.html">Resume</a></h3></li>
-					<li><h3><a href="portfolio.html">Portfolio</a></h3></li>
-					<li><h3><a href="contact.html">Contact</a></h3></li>
-				</ul>
-			</div>
-		</div>
-        <h2>Email</h2>
-        <p><a href="mailto:grago1999@gmail.com?Subject=Hi%20Gianluca!" target="_top">grago1999@gmail.com</a></p>
-        <h2>Github</h2>
-        <p><a href="https://github.com/grago1999">grago1999</a></p>
+        <div class="topBar">
+            <h1><a rel="noreferrer noopener" href="index.html">Gianluca Rago</a></h1>
+            <div class="navBar">
+                <ul>
+                    <li><h3><a rel="noreferrer noopener" href="index.html">Home</a></h3></li>
+                    <li><h3><a rel="noreferrer noopener" href="about.html">About</a></h3></li>
+                    <li><h3><a rel="noreferrer noopener" href="portfolio.html">Portfolio</a></h3></li>
+                    <li><h3><a rel="noreferrer noopener" href="contact.html">Contact</a></h3></li>
+                </ul>
+            </div>
+        </div>
+    <div class="space"></div>
+    <div class="sr2Space"></div>
+        <h2 class="item"><a id="email" class="main" onclick="selectedItem(this.id)" target="_blank">Email</a></h2>
+        <div id="emailInfo" class="item hideInit">
+            <p><a rel="noreferrer noopener" href="mailto:g.rago@columbia.edu?Subject=Hello!" target="_blank" class="ext">g.rago@columbia.edu</a></p>
+        </div>
+
+        <h2 class="item"><a id="github" class="main" onclick="selectedItem(this.id)" target="_blank">Github</a></h2>
+        <div id="githubInfo" class="item hideInit">
+            <p><a rel="noreferrer noopener" href="https://github.com/grago1999" target="_blank" class="ext">grago1999</a></p>
+        </div>
+
+        <h2 class="item"><a id="linkedin" class="main" onclick="selectedItem(this.id)" target="_blank">LinkedIn</a></h2>
+        <div id="linkedinInfo" class="item hideInit">
+            <p><a rel="noreferrer noopener" href="https://www.linkedin.com/in/grago" target="_blank" class="ext">Gianluca Rago</a></p>
+        </div>
+        <!-- ( ͡° ͜ʖ ͡°) -->
+		<div class="bottom"></div>
 	</body>
 </html>
