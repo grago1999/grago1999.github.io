@@ -1,4 +1,3 @@
-const appId = 10101010;
 
 let ids = [];
 const duration = 750;
@@ -35,22 +34,4 @@ const selectedItem = id => {
 	$("html, body").animate({
         scrollTop: $("#"+id).offset().top-window.innerHeight/4
     }, duration);
-    report("click-show-info", id);
 };
-
-const report = (actionTypeId, elementId = null) => {
-	new Fingerprint2().get((result) => {
-		var sha = new jsSHA("SHA-512", "TEXT");
-		sha.update(result);
-		deviceId = sha.getHash("HEX");
-		var reportUrl = "https://conjungo.io/analytics/api/v1/report?appId="+appId.toString()+"&deviceId="+deviceId+"&actionTypeId="+actionTypeId;
-		if (elementId) {
-			reportUrl += ("&elementId=" + elementId);
-		}
-		$.get(reportUrl, (data, status) => {
-	        console.log("yay");
-	    });
-	});
-};
-
-report("view-page", currentPage);
